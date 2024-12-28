@@ -15,19 +15,19 @@ if (fs.existsSync('.env')) require('dotenv').config({ path: __dirname+'/.env' })
 
 
 //=================================================//
-global.SESSION_ID = process.env.SESSION_ID || '' 
+global.SESSION_ID = process.env.SESSION_ID || "XPLOADER~eyJub2lzZUtleSI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoic0IxTDJSMVh0ei9LQTdOdUlDRnYyVm9nL3VUeE5Ccnl5UWZpNTg5MkgxZz0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiU2k2UWt4STYyenBhZnRMRzIyUXhOMU5WMGVpaXFMTThNYXBtb3ZIa0JXbz0ifX0sInBhaXJpbmdFcGhlbWVyYWxLZXlQYWlyIjp7InByaXZhdGUiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJNRmFaZGU1RFdpVW8wck9iK3UrdHdjeWxKNEtqcXdoZVpJVG1xcEVMTkgwPSJ9LCJwdWJsaWMiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJoOWREQ3p0bnR0TjU5Y291V1l5UDZUNTFOcXNoTWFwdEljSGx4dkJPaWlBPSJ9fSwic2lnbmVkSWRlbnRpdHlLZXkiOnsicHJpdmF0ZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IktIR1dsMktIY0Z2dXpRUDdkRk1MeGxPcVVlc25ldU50VjNYUlZNc1Nibmc9In0sInB1YmxpYyI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6ImROclQxYytEYUl1L2tRdHFuTlY5bUJjMEdQcWJweEpjM04wa1NCQjlRaWc9In19LCJzaWduZWRQcmVLZXkiOnsia2V5UGFpciI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoidUFjVDh0NjFKLzEyeGl4UGZhZHZzSTZWK1c0NlgwM2hjeFlYRlhYcUswQT0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiVHQ4UklVVlV2S3pEUk5Nbm5XZStNTW1uczNzQXNVVlQxTmVLblUxb0pCMD0ifX0sInNpZ25hdHVyZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6ImsvdVJUb3Y3V1BEUkVxQXE3SDhsL0p2T0RDQ05pbVNacStMbzRrMWNxZTR5TEVMWGxsMjNIVVNKWkVUWUw3dFFRRERtSmVkdUJMK0JkZVJPUldnS2dRPT0ifSwia2V5SWQiOjF9LCJyZWdpc3RyYXRpb25JZCI6MTMyLCJhZHZTZWNyZXRLZXkiOiJyelBYL3Bod0dnS1E5RTh4cGJFU1MydEEyRDNYZlJ2Nmd2c1h2bnp1d0JJPSIsInByb2Nlc3NlZEhpc3RvcnlNZXNzYWdlcyI6W10sIm5leHRQcmVLZXlJZCI6MzEsImZpcnN0VW51cGxvYWRlZFByZUtleUlkIjozMSwiYWNjb3VudFN5bmNDb3VudGVyIjowLCJhY2NvdW50U2V0dGluZ3MiOnsidW5hcmNoaXZlQ2hhdHMiOmZhbHNlfSwiZGV2aWNlSWQiOiJ1SjNkdHcyUFJPU2cyZW1YRy1nU2VRIiwicGhvbmVJZCI6IjQwMTA2YzVkLTBiNjItNDI4Mi1iYzQyLTBjY2Q0MTUxMjZhNCIsImlkZW50aXR5SWQiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJLaDRWQStaQlZPRDBXTStzOEh6aUJLT09GUG89In0sInJlZ2lzdGVyZWQiOnRydWUsImJhY2t1cFRva2VuIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiZmRROTMxTGdXK1V6U0ZxS1JBU2IrbkNDZFprPSJ9LCJyZWdpc3RyYXRpb24iOnt9LCJwYWlyaW5nQ29kZSI6IkY5UEFXWTNTIiwibWUiOnsiaWQiOiIyMzQ4MTAxNjk5MzQwOjU4QHMud2hhdHNhcHAubmV0IiwibGlkIjoiOTcwMTkzODU0MDE0NTA6NThAbGlkIn0sImFjY291bnQiOnsiZGV0YWlscyI6IkNJU3RzSXNERU55N3Y3c0dHQUVnQUNnQSIsImFjY291bnRTaWduYXR1cmVLZXkiOiJzbnMxZTIrOFlpUG00akp4c1B6dytGZTdXRHA0OUhzaCsrL09SL2dEQjM4PSIsImFjY291bnRTaWduYXR1cmUiOiIvOWtLdFRxMzRzU0Q2YStzVFpzbUhWN0Q0Z2lhMk9KMC9SaEFYV3lEMDJ4MHBncStubTN0a0hsQU1MN1YwUVZrQXhSLy9SVVlSZm9leVhCMFZnT0tCdz09IiwiZGV2aWNlU2lnbmF0dXJlIjoiVFIybmR1d21BbFFVWE9TZ3pOa2dqemxyZUhPaXdhbnZJZXZqakFWZnZEdUJyUU1uZmpud2s4YllLZkJpeXlZcURvU1habGQvNGthZ3Bib1F4di9YZ1E9PSJ9LCJzaWduYWxJZGVudGl0aWVzIjpbeyJpZGVudGlmaWVyIjp7Im5hbWUiOiIyMzQ4MTAxNjk5MzQwOjU4QHMud2hhdHNhcHAubmV0IiwiZGV2aWNlSWQiOjB9LCJpZGVudGlmaWVyS2V5Ijp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiQmJKN05YdHZ2R0lqNXVJeWNiRDg4UGhYdTFnNmVQUjdJZnZ2emtmNEF3ZC8ifX1dLCJwbGF0Zm9ybSI6ImFuZHJvaWQiLCJsYXN0QWNjb3VudFN5bmNUaW1lc3RhbXAiOjE3MzUzODQ1NTR9" 
 //Enter your Xploader session id here; must start with XPLOADER~
 
 //=================================================//
-global.botname = process.env.BOT_NAME || '𝐗𝐩𝐥𝐨𝐚𝐝𝐞𝐫𝐁𝐨𝐭' 
+global.botname = process.env.BOT_NAME || 'DarkBot' 
 //Your desired bot name
 
 //=================================================//
-global.ownernumber = process.env.OWNER_NUMBER || '254754783972' 
+global.ownernumber = process.env.OWNER_NUMBER || '2348101699340' 
 //Type your number here
 
 //=================================================//
-global.ownername = process.env.OWNER_NAME || 'Tylor' 
+global.ownername = process.env.OWNER_NAME || 'CYBERTAG' 
 //Type your name here
 
 //=================================================//
@@ -53,7 +53,7 @@ global.xprefix = process.env.PREFIX || '.'
 //Set your desired prefix
 
 //=================================================//
-global.mode = process.env.MODE || 'public';
+global.mode = process.env.MODE || 'private';
 // Set to 'private' to enable private mode, otherwise default is 'public'
 
 //=================================================//
@@ -71,7 +71,7 @@ global.anticall = process.env.ANTI_CALL || 'false'
 global.welcome = process.env.WELCOME_MSG || 'false'
 
 //=================================================//
-global.statusemoji = process.env.STATUS_EMOJI || '🙂'
+global.statusemoji = process.env.STATUS_EMOJI || '🥰'
 //Set the emoji that you want to be reacted to status
 
 //=================================================//
